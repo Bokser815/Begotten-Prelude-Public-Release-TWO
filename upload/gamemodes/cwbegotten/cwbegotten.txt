@@ -1,0 +1,8 @@
+"cwbegottenprelude"
+{
+	"title"			"Begotten: Prelude"
+	"author"		"The Begotten Team"
+	"category"		"rp"
+	"description"	""
+	"version"		"1"
+}

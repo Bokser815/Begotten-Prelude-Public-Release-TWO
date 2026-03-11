@@ -64,6 +64,8 @@ kyah - Models
 
 gus - Mapping (District 21/rp_Prelude)
 
+grenlin - Mapping
+
 ObamasGrandpa - Exploit Reporting/Fixing
 
 Other [contributors](https://github.com/DETrooper/Begotten-III/graphs/contributors) who contribute pull requests.

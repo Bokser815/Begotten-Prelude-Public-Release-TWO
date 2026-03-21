@@ -261,7 +261,7 @@ hook.Add("PostDrawTranslucentRenderables","ChatBubblesDraw",function(depth)
 				local bubbler = v.player
 				
 
-				if ( IsValid(bubbler) ) then
+				if ( IsValid(bubbler) and (bubbler:GetNWBool("Cloaked", false) != true) ) then
 					local alpha = 255 * math.min(v.fadeTime, 1)
 					local col1, col2 = ColorAlpha(v.color, alpha), Color(0, 0, 0, alpha)
 					local pos = bubbler:GetPos()
@@ -299,11 +299,9 @@ hook.Add("PostDrawTranslucentRenderables","ChatBubblesDraw",function(depth)
 
 						if !stacksheightplayers[bubbler] then stacksheightplayers[bubbler] = 0 end
 
-						if (bubbler:GetNWBool("Cloaked", false) != true) then
 
-							draw.DrawText(pow,font,0,-(h+stacksheightplayers[bubbler]+30),Color(col1.r, col1.g, col1.b, alpha),TEXT_ALIGN_CENTER)
+						draw.DrawText(pow,font,0,-(h+stacksheightplayers[bubbler]+30),Color(col1.r, col1.g, col1.b, alpha),TEXT_ALIGN_CENTER)
 
-						end
 
 						stacksheightplayers[bubbler] = stacksheightplayers[bubbler]+h
 

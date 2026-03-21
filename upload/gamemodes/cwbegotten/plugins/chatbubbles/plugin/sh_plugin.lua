@@ -299,7 +299,11 @@ hook.Add("PostDrawTranslucentRenderables","ChatBubblesDraw",function(depth)
 
 						if !stacksheightplayers[bubbler] then stacksheightplayers[bubbler] = 0 end
 
-						draw.DrawText(pow,font,0,-(h+stacksheightplayers[bubbler]+30),Color(col1.r, col1.g, col1.b, alpha),TEXT_ALIGN_CENTER)
+						if (bubbler:GetNWBool("Cloaked", false) != true) then
+
+							draw.DrawText(pow,font,0,-(h+stacksheightplayers[bubbler]+30),Color(col1.r, col1.g, col1.b, alpha),TEXT_ALIGN_CENTER)
+
+						end
 
 						stacksheightplayers[bubbler] = stacksheightplayers[bubbler]+h
 
